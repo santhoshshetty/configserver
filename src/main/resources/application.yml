@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    #active: native
+     active: git
+  cloud:
+    config:
+      server:
+        #native:
+          #search-locations: "classpath:/config"
+          #search-locations: "file:///C://Users//ishaan//Downloads//"
+        git:
+          uri: ""
+          default-label: "main"
+          timeout: 5
+          #Clone the github repo during the startup itself, else it will happen on receiving the first request
+          clone-on-start: true
+          #override all the local changes, which will ensure config server always reads the latest changes
+          force-pull: true
+
+server:
+  port: 8071

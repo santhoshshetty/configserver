@@ -15,6 +15,11 @@ spring:
           timeout: 5
           clone-on-start: true
           force-pull: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 server:
   port: 8071

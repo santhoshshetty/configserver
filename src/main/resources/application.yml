@@ -8,18 +8,13 @@ spring:
     config:
       server:
         #native:
-        #search-locations: "classpath:/config"
-        #search-locations: "file:///C://Users//ishaan//Downloads//"
+        # search-locations: "classpath:/config"
         git:
-          uri: "https://github.com/santhoshshetty/configserver.git"
+          uri: https://github.com/santhoshshetty/configserver.git
           default-label: main
           timeout: 5
-          #Clone the github repo during the startup itself, else it will happen on receiving the first request
           clone-on-start: true
-          #override all the local changes, which will ensure config server always reads the latest changes
           force-pull: true
-encrypt:
-  key: "9160669160082810558"
 
 server:
   port: 8071

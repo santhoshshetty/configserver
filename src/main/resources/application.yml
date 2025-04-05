@@ -10,7 +10,7 @@ spring:
         #native:
         # search-locations: "classpath:/config"
         git:
-          uri: https://github.com/santhoshshetty/configserver.git
+          uri: "https://github.com/santhoshshetty/configserver.git"
           default-label: main
           timeout: 5
           clone-on-start: true
